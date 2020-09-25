@@ -1,0 +1,219 @@
+.Ddown-menu>div>a {
+    text-decoration: none;
+    color: black
+}
+
+body {
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(31, 31, 31);
+}
+
+.Ddown-menu {
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    right: 0;
+    margin-top: 3px;
+    width: 160px;
+    text-align: center;
+    height: 0;
+    opacity: 0;
+    transition: all 0.3s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(85, 85, 85);
+    border-bottom: #FF6F61 solid 2px;
+    z-index: 2;
+}
+
+.Ddown {
+    z-index: 1;
+}
+
+.Ddown-menu div a {
+    color: white;
+}
+
+.Ddown:hover .Ddown-menu {
+    height: 200px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Ddown:hover {
+    color: rgb(255, 111, 97);
+    border-bottom: rgb(255, 111, 97) solid 3px;
+    box-shadow: 0px 8px 16px 0px rgba(5, 4, 4, 0.1);
+}
+
+.Ddown-menu>div:hover a {
+    color: rgb(255, 111, 97);
+}
+
+.nav-input:focus {
+    box-shadow: 0px 8px 16px 0px rgba(5, 4, 4, 0.2);
+    border-color: rgb(255, 111, 97);
+}
+
+pre {
+    tab-size: 8;
+}
+
+.btn:hover {
+    border-color: rgb(255, 111, 97);
+}
+
+.slider div.ss {
+    display: none;
+    align-items: center;
+    text-align: center;
+    height: 600px;
+    animation: fade 1s;
+}
+
+.slider {
+    height: 565px;
+    box-shadow: 0px 8px 16px 0px rgba(5, 4, 4, 0.2);
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.controls {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(158, 17, 4, 0.199);
+    width: 5%;
+    height: 100%;
+    transition: all 0.4s;
+}
+
+.controls:hover {
+    background-color: rgba(139, 15, 4, 0.582);
+    transition: all 0.4s;
+}
+
+.down {
+    left: 0;
+}
+
+.up {
+    right: 0;
+}
+
+.note {
+    position: absolute;
+    width: 80%;
+    height: 30%;
+    bottom: 0;
+    right: 5%;
+    padding-right: 4%;
+    color: white;
+    background: linear-gradient(to right, #feffff00, #000000b2);
+}
+
+.note p {
+    font-size: 1.3em;
+    animation: fade 1s;
+    text-shadow: 1px 1px #000000ec;
+}
+
+.note h2 {
+    color: rgb(212, 20, 3);
+    font-weight: 600;
+    animation: fade 1s;
+    text-shadow: 2px 2px #000000e1;
+}
+
+.post {
+    height: 220px;
+    margin: 15px 0px;
+    box-shadow: 0px 8px 16px 0px rgba(5, 4, 4, 0.2);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.5s;
+    border: 1px rgba(19, 19, 19, 0.671) solid;
+}
+
+.postImg img {
+    height: 185px;
+    box-shadow: 0px 8px 16px 0px rgba(5, 4, 4, 0.699);
+    opacity: 0.7;
+    transition: all 0.5s;
+}
+
+.post:hover .postImg img {
+    opacity: 1;
+}
+
+.post:hover {
+    background-color: rgb(41, 41, 41);
+}
+
+.btncontiniue {}
+
+@media screen and (max-width: 768px) {
+    .side-collapse-container {
+        width: 100%;
+        position: relative;
+        left: 0;
+        transition: left .4s;
+    }
+    .side-collapse-container.out {
+        left: 250px;
+        margin-left: 5px;
+    }
+    .side-collapse {
+        top: 50px;
+        bottom: 0;
+        left: 0;
+        width: 200px;
+        position: fixed;
+        overflow: hidden;
+        transition: width .4s ease-in-out;
+        box-shadow: 5px 10px 10px 10px rgba(5, 4, 4, 0.2);
+    }
+    .side-collapse.in {
+        width: 0;
+    }
+    .Ddown-menu {
+        position: relative;
+        border: none;
+        width: 250px;
+        text-align: right;
+    }
+    .slider {
+        height: 175px;
+        box-shadow: 0px 8px 16px 0px rgba(5, 4, 4, 0.2);
+    }
+    .slider div.ss {
+        height: 200px;
+        display: none;
+    }
+    .controls {
+        width: 10%;
+    }
+    .note p {
+        font-size: 0.3em;
+        display: none;
+    }
+    .note h2 {
+        color: rgb(212, 20, 3);
+        font-weight: 300;
+        font-size: 1.4em;
+        text-shadow: 0.5px 0.5px #000000e1;
+    }
+    .note {
+        right: 10%;
+    }
+}

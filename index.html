@@ -1,0 +1,235 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="ui_files/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ui_files/RTLbootstrap/css/bootstrap-rtl.css">
+    <script src=" ui_files/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="ui_files/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="ui_files/bootstrap-3.3.7/js/jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" href=" ui_files/style/style.css">
+    <script src=" ui_files/js/scripts.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        $(document).ready(function() {
+            var sideslider = $('[data-toggle=collapse-side]');
+            var sel = sideslider.attr('data-target');
+            var sel2 = sideslider.attr('data-target-2');
+            sideslider.click(function(event) {
+                $(sel).toggleClass('in');
+                $(sel2).toggleClass('out');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class=" container">
+        <div class="row">
+            <nav class=" navbar-inverse navbar navbar-fixed-top col-md-12  col-xs-12 snav">
+                <div class="container-fluid col-md-offset-2 col-md-10">
+                    <div class="navbar-header " style="margin-left: 5px;">
+                        <a class="navbar-brand" href="#">
+                            film.G
+                        </a>
+                        <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                    </div>
+                    <div class=" side-collapse in">
+                        <nav role="navigation" class="navbar-collapse">
+                            <ul class="nav navbar-nav ">
+                                <li class=" Ddown"><a href="#"><i class="fa fa-fw fa-home"></i> خانه</a></li>
+                                <li class="Ddown ">
+                                    <a href=""><i class="fa fa-pencil"></i>  نقد ها</a>
+                                    <div class="Ddown-menu ">
+                                        <div class="col-md-12"><a href="">جنایی</a></div>
+                                        <div class="col-md-12"><a href="">اکشن</a></div>
+                                        <div class="col-md-12"><a href="">معمایی</a></div>
+                                        <div class="col-md-12"><a href="">کمدی</a></div>
+                                        <div class="col-md-12"><a href="">درام</a></div>
+                                    </div>
+                                </li>
+                                <li class="Ddown ">
+                                    <a href=""><i class="fa fa-newspaper-o"></i>  اخبار</a>
+                                    <div class="Ddown-menu ">
+                                        <div class="col-md-12"><a href="">سینمای جهان</a></div>
+                                        <div class="col-md-12"><a href="">سینمای ایران</a></div>
+                                        <div class="col-md-12"><a href="">باکس افیس</a></div>
+                                        <div class="col-md-12"><a href="">تلویزیون</a></div>
+                                        <div class="col-md-12"><a href="">جشنواره ها</a></div>
+                                    </div>
+                                </li>
+                                <li class="Ddown ">
+                                    <a href=""><i class="fa fa-fw fa-user"></i>  ورود</a>
+                                </li>
+                                <form class="navbar-form navbar-left c">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control nav-input" placeholder="جستجو">
+                                    </div>
+                                    <button type="submit" class="btn btn-default"><i class="fa fa-fw fa-search"></i> جستجو</button>
+                                </form>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- end navbar-->
+
+
+
+
+
+        <div class="container-fluid side-collapse-container" style="margin-top: 50px;">
+            <!--slider-->
+            <div class="slider col-md-12 col-xs-12">
+                <div class="col-md-12 col-xs-12 ss" style="display: block;">
+                    <div class="imgslider">
+                        <img src=" ui_files/image/slider/1.jpg" alt="wind" style="width: 95%;" />
+                    </div>
+                </div>
+                <div class="col-md-12 col-xs-12 ss">
+                    <div class="imgslider">
+                        <img src="ui_files/image/slider/2.jpg" alt="batman" style="width: 95%;" />
+                    </div>
+                </div>
+                <div class="col-md-12 col-xs-12 ss">
+                    <div class="imgslider">
+                        <img src="ui_files/image/slider/3.jpg" alt="you" style="width: 95%;" />
+                    </div>
+                </div>
+                <div class="col-md-12 col-xs-12 ss">
+                    <div class="imgslider">
+                        <img src=" ui_files/image/slider/4.jpg" alt="glass" style="width: 95%;" />
+                    </div>
+                </div>
+                <div class="col-md-12 col-xs-12 ss">
+                    <div class="imgslider">
+                        <img src="ui_files/image/slider/5.jpg" alt="blade" style="width: 95%;" />
+                    </div>
+                </div>
+                <div class="col-md-12 col-xs-12 ss">
+                    <div class="imgslider">
+                        <img src="ui_files/image/slider/6.jpg" alt="figth" style="width: 95%;" />
+                    </div>
+                </div>
+                <!--controls-->
+                <div class="up controls" onclick="moveup()">
+                    <i class="fa fa-angle-double-right" style="font-size:36px; color: white;"></i>
+                </div>
+
+                <div class="down controls" onclick="movedown()">
+                    <i class="fa fa-angle-double-left" style="font-size:36px; color: white;"></i>
+                </div>
+                <!--end controls-->
+                <!--note-->
+                <div class="note">
+                    <h2 id="h22">
+                        Wind River 2017
+                    </h2>
+                    <br/>
+                    <p id="p1">
+                        تریلر جنایی Wind River یکی از بهترین فیلم‌های ۲۰۱۷ و سرانجام بی‌نظیری بر سه‌گانه‌ی تیلور شریدان است
+                    </p>
+                </div>
+            </div>
+            <!--end slider-->
+
+            <!--posts-->
+            <div class=" container-fluid col-md-12">
+                <div class=" col-md-6 col-xs-12 post">
+                    <div class=" col-md-6 col-xs-12 postImg">
+                        <img src="ui_files/image/slider/1.jpg" alt="" style="width: 100%;" />
+                    </div>
+                    <div class=" col-md-6 col-xs-12 postText">
+                        <h2 id="title">
+                            Wind river 2017
+                        </h2>
+                        <p id="postText">
+                            تریلر جنایی Wind River یکی از بهترین فیلم‌های ۲۰۱۷ و سرانجام بی‌نظیری بر سه‌گانه‌ی تیلور شریدان است
+                        </p>
+                    </div>
+                    <div class="btncontiniue ">
+                        <a href="">
+                        ادامه مطلب
+                    </a>
+                    </div>
+                </div>
+                <!---->
+                <div class=" col-md-6 col-xs-12 post">
+                    <div class=" col-md-6 col-xs-12 postImg">
+                        <img src="ui_files/image/slider/2.jpg" alt="" style="width: 100%;" />
+                    </div>
+                    <div class=" col-md-6 col-xs-12 postText">
+                        <h2 id="title">
+                            The Dark Knight Rises 2012
+                        </h2>
+                        <p id="postText">
+                            تریلر جناییهشت سال از حوادث پایان فیلم شوالیه تاریکی گذشته است. بروس وین (بتمن) اکنون مردی شکسته است که با خدمتکار وفادار خود به تنهایی روزگار را سپری می کند. مزدوری با نام بین (Bane) که از ارتش سایه ها اخراج شده است برای انتقامی ویران کننده به شهر گاتهام
+                            بازگشته است
+                        </p>
+                    </div>
+                    <div class="btncontiniue ">
+                        <a href="">
+                        ادامه مطلب
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class=" container-fluid col-md-12">
+                <div class=" col-md-6 col-xs-12 post">
+                    <div class=" col-md-6 col-xs-12 postImg">
+                        <img src="ui_files/image/slider/3.jpg" alt="" style="width: 100%;" />
+                    </div>
+                    <div class=" col-md-6 col-xs-12 postText">
+                        <h2 id="title">
+                            Glass 2019
+                        </h2>
+                        <p id="postText">
+                            اگرچه فیلم Glass قرار بود به مهر تاییدی روی بازگشتِ پُرقدرتِ ام. نایت شیامالان تبدیل شود، اما نتیجه، دنباله‌ی ناامیدکننده‌ای برای طرفداران Unbreakable است
+                        </p>
+                    </div>
+                    <div class="btncontiniue ">
+                        <a href="">
+                        ادامه مطلب
+                    </a>
+                    </div>
+                </div>
+                <!---->
+                <div class=" col-md-6 col-xs-12 post">
+                    <div class=" col-md-6 col-xs-12 postImg">
+                        <img src="ui_files/image/slider/4.jpg" alt="" style="width: 100%;" />
+                    </div>
+                    <div class=" col-md-6 col-xs-12 postText">
+                        <h2 id="title">
+                            Blade Runner 2049
+                        </h2>
+                        <p id="postText">
+                            دنی ویلنوو دوباره گل کاشته است. فیلم Blade Runner 2049، دنباله‌ای استثنایی بر فیلم کالت ریدلی اسکات و یک تجربه‌ی سینمایی خارق‌العاده است
+                        </p>
+                    </div>
+                    <div class="btncontiniue ">
+                        <a href="">
+                        ادامه مطلب
+                    </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--end posts-->
+
+
+
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>
